@@ -19,8 +19,6 @@ const db = knex({
   }
 });
 
-const DATABASE_URL = process.env.DATABASE_URL;
-
 const app = express();
 
 app.use(bodyParser.json());
@@ -52,6 +50,6 @@ app.post('/imageurl', (req, res) => {
   image.handleApiCall(req, res);
 });
 
-app.listen(DATABASE_URL, () => {
-  console.log(`app is running on port ${DATABASE_URL}`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`app is running on port ${provess.env.PORT}`);
 });
