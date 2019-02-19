@@ -32,11 +32,13 @@ CREATE TABLE users (id SERIAL PRIMARY KEY, name VARCHAR(100), email TEXT UNIQUE 
 CREATE TABLE login ( id serial PRIMARY KEY, hash varchar(100) NOT NULL, email text UNIQUE NOT NULL);
 ```
 
+Replace the REACT_APP_CLARIFAI_API_KEY with your own Clarifai API
 
 Run the app
 ```
 npm start
 ```
+
 
 ## Built With
 
